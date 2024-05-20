@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Sans">
+	<title>Seatwork 2</title>
+	  <style type="text/css">
+        body {
+            font-family: Courier New;
+            background-color: #7EABC8;
+            margin: 40px;
+            text-align: center;
+        }
+
+        .calcu {
+            border-style: double;
+            border-width: 15px;
+            border-color: #7A1EEF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 0px;
+            padding-right: 10px;
+        }
+
+        .calcu h1 {
+            font-family: Courier New;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .calcu input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            width: 200px;
+            display: inline-block;
+        }
+        img {
+        	url: "OH DIBA.png";
+        	align: center;
+        	height: 450px;
+        	width: 400px;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+
+	<img src="OH DIBA.png">
+<br><br>
+    <div class="calcu">
+        <h1><b>Calculate as much as you want!</b></h1>
+        <form>
+            <p><b>Enter the x:</b></p>
+            <input type="text" id="id1"><br>
+            <br>
+            <p><b>Enter the y:</b></p>
+            <input type="text" id="id2"><br>
+            <br>
+            <p><b>Choose an operation:</b></p>
+            <input type="submit" value="Add" onclick="add()">
+            <br>
+            <input type="submit" value="Subtract" onclick="subtract()">
+            <br>
+            <input type="submit" value="Divide" onclick="divide()">
+            <br>
+            <input type="submit" value="Multiply" onclick="multiply()">
+        </form>
+     </div>
+<br><br>
+    <script>
+        function multiply() {
+            var num1 = document.getElementById('id1').value;
+            var num2 = document.getElementById('id2').value;
+            var product = num1 * num2;
+            window.alert(product);
+        }
+
+        function divide() {
+            var num1 = document.getElementById('id1').value;
+            var num2 = document.getElementById('id2').value;
+            var quotient = num1 / num2;
+            window.alert(quotient);
+        }
+
+        function subtract() {
+            var num1 = document.getElementById('id1').value;
+            var num2 = document.getElementById('id2').value;
+            var difference = num1 - num2;
+            window.alert(difference);
+        }
+
+        function add() {
+            var num1 = document.getElementById('id1').value;
+            var num2 = document.getElementById('id2').value;
+            var sum = Number(num1) + Number(num2);
+            window.alert(sum);
+        }
+    </script>
+
+</body>
+</html>
